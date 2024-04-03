@@ -1,0 +1,16 @@
+/*C2*/SET SCHEMA PUBLIC
+SET SCHEMA "PUBLIC"
+CREATE TABLE attendees (\u000d\u000a    id VARCHAR(255) NOT NULL PRIMARY KEY,\u000d\u000a    name VARCHAR(255) NOT NULL,\u000d\u000a    email VARCHAR(255) NOT NULL,\u000d\u000a    event_id VARCHAR(255) NOT NULL,\u000d\u000a    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\u000d\u000a    CONSTRAINT attendees_event_id_fkey FOREIGN KEY (event_id) REFERENCES events (id) ON DELETE RESTRICT ON UPDATE CASCADE\u000d\u000a)
+INSERT INTO "flyway_schema_history" VALUES(2,'2','create-table-attendees','SQL','V2__create-table-attendees.sql',1911608110,'SA','2024-04-03 14:55:43.782894',23,'1')
+COMMIT
+SET SCHEMA "PUBLIC"
+CREATE TABLE check_ins (\u000d\u000a    id INTEGER NOT NULL PRIMARY KEY IDENTITY,\u000d\u000a    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\u000d\u000a    attendee_id VARCHAR(255) NOT NULL,\u000d\u000a    CONSTRAINT check_ins_attendee_id_fkey FOREIGN KEY (attendee_id) REFERENCES attendees (id) ON DELETE RESTRICT ON UPDATE CASCADE\u000d\u000a\u000d\u000a)
+INSERT INTO "flyway_schema_history" VALUES(3,'3','create-table-checkins','SQL','V3__create-table-checkins.sql',-378327417,'SA','2024-04-03 14:55:43.809893',2,'1')
+COMMIT
+SET SCHEMA "PUBLIC"
+CREATE UNIQUE INDEX events_slug_key ON events(slug)
+CREATE UNIQUE INDEX attendees_event_id_email_key ON attendees (event_id, email)
+CREATE UNIQUE INDEX check_ins_attendee_id_key ON check_ins (attendee_id)
+INSERT INTO "flyway_schema_history" VALUES(4,'4','create-indexes','SQL','V4__create-indexes.sql',-781485658,'SA','2024-04-03 14:55:43.837893',3,'1')
+COMMIT
+SET SCHEMA "PUBLIC"
