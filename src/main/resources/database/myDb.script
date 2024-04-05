@@ -29,7 +29,7 @@ SET FILES NIO TRUE
 SET FILES NIO SIZE 256
 SET FILES LOG TRUE
 SET FILES LOG SIZE 50
-SET FILES CHECK 1125
+SET FILES CHECK 1281
 SET DATABASE COLLATION "SQL_TEXT" PAD SPACE
 CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
 ALTER USER SA SET LOCAL TRUE
@@ -60,4 +60,7 @@ INSERT INTO "flyway_schema_history" VALUES(3,'3','create-table-checkins','SQL','
 INSERT INTO "flyway_schema_history" VALUES(4,'4','create-indexes','SQL','V4__create-indexes.sql',-781485658,'SA','2024-04-03 14:55:43.837893',3,'1')
 INSERT INTO EVENTS VALUES('70bf5b3d-85ed-45f5-a2d9-45ddd1e6a274','Rocketseat NLW Unite','Aprenda v\u00e1rias tecnologias de forma Java de forma gratuita e online!','rocketseatnlwunite',500)
 INSERT INTO EVENTS VALUES('c3c3717a-9a92-4396-8b17-077215993c43','Rocketseat NLW','Aprenda Java de forma gratuita!','rocketseatnlw',500)
+INSERT INTO EVENTS VALUES('dce1a745-d902-4c6e-8934-5b6938ea2b63','Rocketseat NLW Unite 2;0','Aprenda v\u00e1rias tecnologias de forma Java de forma gratuita e online!','rocketseatnlwunite20',1)
+INSERT INTO ATTENDEES VALUES('78252b6e-d20d-4081-9d18-d3c19f48b26e','Marlene Theodora','teste@gmail.com','dce1a745-d902-4c6e-8934-5b6938ea2b63','2024-04-04 18:38:18.625181')
 INSERT INTO ATTENDEES VALUES('c3c3717a-9a92-4396-8b17-077215993c43','Camila Maria','camila_maria@gmail.com','c3c3717a-9a92-4396-8b17-077215993c43',NULL)
+INSERT INTO ATTENDEES VALUES('f00499a1-fd6c-46ae-a8b7-22572dabb2de','Marlene Theodora','teste@gmail.com','c3c3717a-9a92-4396-8b17-077215993c43','2024-04-04 18:34:25.600238')
