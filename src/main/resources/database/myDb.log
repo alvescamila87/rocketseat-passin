@@ -1,8 +1,6 @@
 /*C2*/SET SCHEMA PUBLIC
 SET SCHEMA "PUBLIC"
-INSERT INTO EVENTS VALUES('36b415e8-79a3-4a38-baef-64c523784489','Rocketseat NLW Unite 4.0','Java Spring','rocketseatnlwunite40',300)
+INSERT INTO EVENTS VALUES('f46688e7-7586-4819-82ae-abc73f658b6c','Rocketseat NLW Unite 6.0','Java Spring + MySQL','rocketseatnlwunite60',2)
 COMMIT
-INSERT INTO ATTENDEES VALUES('ca44a829-dedb-4e98-bf58-e256bc3ecead','Princesa Isabel','princesa_isabel@gmail.com','36b415e8-79a3-4a38-baef-64c523784489','2024-04-04 21:20:58.581174')
-COMMIT
-INSERT INTO CHECK_INS VALUES(0,'2024-04-04 21:22:21.141197','ca44a829-dedb-4e98-bf58-e256bc3ecead')
+INSERT INTO ATTENDEES VALUES('339c271a-8591-4ddd-83ef-41452e047b9e','Princesa Isabel','princesa_isabel@gmail.com','f46688e7-7586-4819-82ae-abc73f658b6c','2024-04-04 21:35:31.026357')
 COMMIT
