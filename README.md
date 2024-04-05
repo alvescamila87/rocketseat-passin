@@ -13,7 +13,7 @@ O pass.in é uma aplicação de **gestão de participantes em eventos presenciai
 ## Ferramentas
 * Java 17
 * Spring
-* Hbsql (Banco de dados em memória)
+* HsqlDB (Banco de dados em memória)
 * Flyway
 * Lombok
 
